@@ -1,0 +1,12 @@
+.Product {
+  border: 2px solid cornflowerblue;
+}
+
+.Product-normal-price {
+  text-decoration: line-through;
+}
+
+.Product-discounted-price {
+  font: 25px bold;
+  color: red;
+}
