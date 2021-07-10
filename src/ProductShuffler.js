@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ProductList from "./ProductList";
 
 class ProductShuffler extends Component {
 
@@ -27,9 +28,24 @@ class ProductShuffler extends Component {
             let randomProduct = productGroup2.splice(idx, 1)[0];
             productGroup1.push(randomProduct);
         }
+        let originalPriceGroup1 = productGroup1.reduce((price, products) => price + products.normal_price, 0.0);
+        let discountedPriceGroup1 = productGroup1.reduce((price, products) => price + products.discounted_price, 0.0);
+        let totalDiscountGroup1 = originalPriceGroup1 - discountedPriceGroup1;
+        
+        let originalPriceGroup2 = productGroup2.reduce((price, products) => price + products.normal_price, 0.0);
+        let discountedPriceGroup2 = productGroup2.reduce((price, products) => price + products.discounted_price, 0.0);
+        let totalDiscountGroup2 = originalPriceGroup2 - discountedPriceGroup2;
+                
         return(
             <div>
-
+                <ProductList 
+                    products={productGroup1} 
+                    totalDiscount={totalDiscountGroup1} 
+                    isCheapest={totalDiscountGroup1 > totalDiscountGroup2}/>
+                <ProductList 
+                    products={productGroup2} 
+                    totalDiscount={totalDiscountGroup2} 
+                    isCheapest={totalDiscountGroup2 > totalDiscountGroup1}/>
             </div>
         );
     }

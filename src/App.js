@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ProductList from './ProductList';
+import ProductShuffler from './ProductShuffler';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-        <ProductList />
+        <ProductShuffler />
     </div>
   );
 }
