@@ -36,16 +36,22 @@ class ProductShuffler extends Component {
         let discountedPriceGroup2 = productGroup2.reduce((price, products) => price + products.discounted_price, 0.0);
         let totalDiscountGroup2 = originalPriceGroup2 - discountedPriceGroup2;
                 
+        let productList1 = <ProductList 
+            products={productGroup1} 
+            totalDiscount={totalDiscountGroup1} 
+            percentDiscount={totalDiscountGroup1 / originalPriceGroup1 * 100}
+            isCheapest={totalDiscountGroup1 > totalDiscountGroup2}/>;
+
+        let productList2 = <ProductList 
+            products={productGroup2} 
+            totalDiscount={totalDiscountGroup2}
+            percentDiscount={totalDiscountGroup2 / originalPriceGroup2 * 100}
+            isCheapest={totalDiscountGroup2 > totalDiscountGroup1}/>
+
         return(
             <div>
-                <ProductList 
-                    products={productGroup1} 
-                    totalDiscount={totalDiscountGroup1} 
-                    isCheapest={totalDiscountGroup1 > totalDiscountGroup2}/>
-                <ProductList 
-                    products={productGroup2} 
-                    totalDiscount={totalDiscountGroup2} 
-                    isCheapest={totalDiscountGroup2 > totalDiscountGroup1}/>
+                {totalDiscountGroup1 > totalDiscountGroup2 ? productList1 : productList2}
+                {totalDiscountGroup1 > totalDiscountGroup2 ? productList2 : productList1}
             </div>
         );
     }

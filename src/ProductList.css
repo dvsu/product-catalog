@@ -1,8 +1,26 @@
 .ProductList {
+  font-family: "Nunito";
 }
 
 .ProductList-cards {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ProductList-discount-values {
+  display: flex;
+  justify-content: center;
+}
+
+.ProductList-nominal-discount {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.ProductList-percent-discount {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 25px;
 }

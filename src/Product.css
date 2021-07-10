@@ -2,24 +2,37 @@
   /* border: 2px solid cornflowerblue; */
   width: 220px;
   padding: 10px;
-  margin: 0.5rem;
+  margin: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  background-image: radial-gradient( circle 1136px at 5.2% 14%,  rgba(255,255,255,1) 0%, rgba(234,168,17,1) 100.2% );
+  background-image: radial-gradient(
+    circle 1136px at 5.2% 14%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(234, 168, 17, 1) 100.2%
+  );
 }
 
 .Product-normal-price {
+  font-family: "Nunito";
   text-decoration: line-through;
 }
 
+.Product-title {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 25px;
+}
+
 .Product-discounted-price {
-  font: 25px bold;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 22px;
   color: red;
 }
 
 .Product-image {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
 }

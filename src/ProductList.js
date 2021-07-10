@@ -9,7 +9,12 @@ class ProductList extends Component {
         return (
             <div className='ProductList'>
                 <h1>Test</h1>
-                <p>Total discount: {this.props.totalDiscount} </p>
+                <div className='ProductList-discount-title'>Total discount</div>
+                <div className='ProductList-discount-values'>
+                    <div className='ProductList-nominal-discount'>${this.props.totalDiscount.toFixed(2)}</div>
+                    <div>{' '}</div>
+                    <div className='ProductList-percent-discount'>{`${this.props.percentDiscount.toFixed(0)}%`}</div>
+                </div>
                 <div className='ProductList-cards'>
                 {this.props.products.map((product) => 
                     <Product 
