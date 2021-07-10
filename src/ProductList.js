@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Product from './Product';
+import BlackPants from './assets/black_pants.png';
 
 class ProductList extends Component {
     static defaultProps = {
