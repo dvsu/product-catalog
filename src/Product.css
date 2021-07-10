@@ -1,5 +1,13 @@
 .Product {
-  border: 2px solid cornflowerblue;
+  /* border: 2px solid cornflowerblue; */
+  width: 220px;
+  padding: 10px;
+  margin: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-image: radial-gradient( circle 1136px at 5.2% 14%,  rgba(255,255,255,1) 0%, rgba(234,168,17,1) 100.2% );
 }
 
 .Product-normal-price {
@@ -9,4 +17,9 @@
 .Product-discounted-price {
   font: 25px bold;
   color: red;
+}
+
+.Product-image {
+  height: 50px;
+  width: 50px;
 }
