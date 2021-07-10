@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import Product from './Product';
-import './ProductList.css';
+import React, { Component } from "react";
 
-class ProductList extends Component {
+class ProductShuffler extends Component {
+
     static defaultProps = {
         products : [
             { id: 2, name: 'Black Pants', normal_price: 60.00, discounted_price: 29.99, product_image: 'black_pants.png',},
@@ -21,22 +20,20 @@ class ProductList extends Component {
     }
 
     render() {
-        return (
-            <div className='ProductList'>
-                <div className='ProductList-cards'>
-                {this.props.products.map((product) => 
-                    <Product 
-                        key={product.id} 
-                        name={product.name} 
-                        normalPrice={product.normal_price} 
-                        discountedPrice={product.discounted_price} 
-                        productImage={product.product_image} />
-                )}
-                </div>
+        let productGroup1 = [];
+        let productGroup2 = [...this.props.products];
+        while (productGroup2.length > productGroup1.length) {
+            let idx = Math.floor(Math.random() * productGroup2.length);
+            let randomProduct = productGroup2.splice(idx, 1)[0];
+            productGroup1.push(randomProduct);
+        }
+        return(
+            <div>
 
             </div>
         );
     }
 }
 
-export default ProductList;
+
+export default ProductShuffler;
