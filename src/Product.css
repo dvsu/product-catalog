@@ -1,5 +1,6 @@
 .Product {
   border: 2px solid cornflowerblue;
+  width: 250px;
 }
 
 .Product-normal-price {
@@ -9,4 +10,9 @@
 .Product-discounted-price {
   font: 25px bold;
   color: red;
+}
+
+.Product-image {
+  height: 50px;
+  width: 50px;
 }

@@ -1,16 +1,19 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import './Product.css'
 
 class Product extends Component {
 
-    // var images = require(this.props.ref);
-
     render() {
+
+        const { key, name, normalPrice, discountedPrice, productImage } = this.props;
+        console.log(discountedPrice);
+        console.log(productImage);
         return(
-            <div className="Product">
-                <h2>{this.props.name}</h2>
-                <div className="Product-normal-price">${this.props.normalPrice}</div>
-                <div className="Product-discounted-price">${this.props.discountedPrice}</div>
+            <div key={key} className="Product">
+                <h2>{name}</h2>
+                <img className="Product-image" src={require(`./assets/${productImage}`).default} alt={name} />
+                <div className="Product-normal-price">${normalPrice}</div>
+                <div className="Product-discounted-price">${discountedPrice}</div>
             </div>
             
         );
