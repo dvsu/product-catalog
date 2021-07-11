@@ -35,4 +35,14 @@
 .Product-image {
   height: 100px;
   width: 100px;
+  padding: 1rem;
+}
+
+.Product img {
+  transition: all ease 450ms;
+}
+
+.Product img:hover {
+  transform: scale(1.35);
+  opacity: 0.85;
 }

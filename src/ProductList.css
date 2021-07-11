@@ -2,25 +2,79 @@
   font-family: "Nunito";
 }
 
+.ProductList-title-best {
+  background-image: linear-gradient(45deg, #fff4a3, #ffbc63);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 2.7rem;
+}
+
+.ProductList-title-alternative {
+  background-image: linear-gradient(45deg, #fff4a3, #ffbc63);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 2.7rem;
+}
+
 .ProductList-cards {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
+.ProductList-discount-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
 .ProductList-discount-values {
+  color: #ffffff;
   display: flex;
   justify-content: center;
 }
 
+.ProductList-discount-container-left {
+  padding: 1.2rem;
+}
 .ProductList-nominal-discount {
   color: #ffffff;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.7rem;
+  padding: 0.1rem;
 }
 
 .ProductList-percent-discount {
-  color: #ffffff;
+  background-image: linear-gradient(45deg, #ffbc63, #ff8f4a);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 4.7rem;
+  padding-left: 0.2rem;
+}
+.ProductList-percent-char {
+  background-image: linear-gradient(45deg, #fff4a3, #ff8f4a);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 1.1rem;
+  padding-left: 0.3rem;
 }
